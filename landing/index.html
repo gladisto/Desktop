@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mach-E</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="main">
+        <header>
+            <a href="#">
+                <img src="./assetes/mustang logo.png" class="logo" alt="Logo mustang">
+            </a>
+            <ul class="navigation">
+                <li><a href="#">Exterior</a></li>
+                <li><a href="#">Interio</a></li>
+                <li><a href="#">Carregamento</a></li>
+                <li><a href="#">Tecnologia</a></li>
+                <li><a href="#">Modelos</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <h2>Ford mustang <span>Mach-E</span></h2>
+            <a href="#" class="btn">O puro sangue 100% Elétrico</a>
+            <img src="./assetes/vermelho.avif" alt="mustang Mach-E" class="Mach">
+        </div>
+        <div class="slider">
+            <div class="slides active">
+                <h2>
+                    <span>Velocidade Máx</span>
+                    <br>
+                    180Km/h
+                </h2>
+                <h2>
+                    <span>Potência Máxima</span>
+                    <br>329 CV
+
+                </h2>
+            </div>
+            <div class="slides">
+                <h2>
+                    <span>0-100 Km/h</span>
+                    <br>
+
+                </h2>
+                <h2>
+                    <span>Autonomia Máxima</span>
+                    <br>600 Km
+
+                </h2>
+            </div>
+            <div class="slides">
+                <h2>
+                    <span>Carregamento 10-80%</span>
+                    <br>
+                    32.2min
+                </h2>
+                <h2>
+                    <span>Capacidade bateria</span>
+                    <br>
+                    72.6kwh
+                </h2>
+            </div>
+        </div>
+        <footer>
+            <ul class="sci">
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+            <div class="dots">
+                <span class="dot acetive"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </footer>
+
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const slides = document.querySelectorAll(".slides");
+        const dots = document.querySelectorAll(".dot");
+
+        function setActive(i) {
+             console.log(i)
+            for (slide of slides) {
+                slide.classList.remove('active');
+                slides[i].classList.add('active');
+            }
+
+            for (dot of dots) {
+                dot.classList.remove('active');
+                dots[i].classList.add('active');
+            }
+
+        }
+
+      for (let j = 0; j < dots.length; j++) {
+        dots[j].addEventListener('click', () =>{
+            setActive(j);
+        })
+      }
+    </script>
+</body>
+
+</html>
